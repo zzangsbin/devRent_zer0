@@ -1,0 +1,35 @@
+{% extends 'posts/base.html' %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block posts %}
+    <div>
+    <div>{{ detail.title }}</div><br> 
+    <!-- 여기서의 detail은 views.py의 56번째 행 'detail' -->
+        
+    <div>{{ detail.get_category_display }}</div><br>
+
+    <div>{{ detail.content |linebreaksbr }}</div><br>
+
+    <div>글 작성: {{ detail.created_at }}</div>
+    <div>최종 수정: {{ detail.updated_at }}</div>
+    
+    {% endblock %}
+    <!-- {{ detail.title }}
+        
+    {{ detail.get_category_display }}
+
+    {{ detail.content }}
+
+    글 작성: {{ detail.created_at }}
+    최종 수정: {{ detail.updated_at }} -->
+
+
+</body>
+</html>
