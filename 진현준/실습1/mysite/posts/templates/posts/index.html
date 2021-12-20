@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정문</title>
+</head>
+<body>
+    <h1>블로그 정문</h1>
+    <div class="create">
+      <button type="button" class="create-btn"><a href="{% url 'posts:create' %}">글 작성</a></button> 
+    </div>
+    <div class="update">
+      <button type="button" class="update-btn"><a href="{% url 'posts:list' %}">글 목록</a></button>
+    </div>
+    <div>
+      <img src="/static/리버풀 배경.jpg" alt="글 작성"/>
+    </div>
+</body>
+</html>
